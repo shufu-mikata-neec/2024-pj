@@ -2,7 +2,7 @@
 
 ## 参考リンク
 
-- [docker desktopの参考サイト](https://qiita.com/zembutsu/items/a98f6f25ef47c04893b3) 
+- [docker desktopの参考サイト](https://qiita.com/zembutsu/items/a98f6f25ef47c04893b3)
 Windows 11にDocker Desktopを入れる手順（令和5年最新版）
 
 - [mysqlの参考サイト](https://qiita.com/aki_number16/items/bff7aab79fb8c9657b62)
@@ -10,12 +10,11 @@ WindowsにMySQLをインストールする
 
 ## 1.Docker Desctopのダウンロード
 
-- https://www.docker.com/products/docker-desktop/
+- <https://www.docker.com/products/docker-desktop/>
 
 こちらのサイトにアクセスしてdockerをダウンロード。
 
 ![image](https://github.com/user-attachments/assets/cfe3854d-de12-4e59-9f0b-01fd2a687c49)
-
 
 おそらくAMD64なので`Download for Windows - AMD6`を押下
 
@@ -44,6 +43,7 @@ docker compose up -d
 ## 5.MySQLの起動とデータベースへの接続
 
 ### 5-1.MySQL Workbenchの起動
+
 前工程でコンテナを起動しているとすでにMySQLは立ち上がっている。
 `MySQL`を操作するための`Workbench`の起動をする。
 
@@ -51,6 +51,7 @@ docker compose up -d
 
 ※ない場合はインストール時に入れていないかもしれません。バージョンを下げるか、もしくはインストールしなおしてください。
 ***
+
 ### 5-2.Connectionの作成
 
 ![image4](https://github.com/user-attachments/assets/7401edb0-d62f-4422-8541-c6711ef50190)
@@ -69,6 +70,7 @@ Usernameを`user`にしてOKボタンを押下。
 ## 6.テーブル作成
 
 queryのところに下記のコマンドをコピペ
+
 ```sql
 use `php-docker-db`;
 create table mytable(id int, name char(100));
