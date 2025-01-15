@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家計簿トップ画面</title>
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h2>家計簿アプリ</h2>
+        </header>
+
+        <div class="dashboard">
+            <div class="summary-cards">
+                <div class="card income">
+                    <i class="fas fa-arrow-up"></i>
+                    <h3>今月の収入</h3>
+                    <p id="income">####</p>
+                    <span class="trend">先月比:####</span>
+                </div>
+                <div class="card expense">
+                    <i class="fas fa-arrow-down"></i>
+                    <h3>今月の支出</h3>
+                    <p id="expense">####</p>
+                    <span class="trend">先月比:####</span>
+                </div>
+                <div class="card balance">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>収支バランス</h3>
+                    <p id="balance">####%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3>支出カテゴリ分析</h3>
+                    <select class="period-selector">
+                        <option>今月</option>
+                        <option>先月</option>
+                        <option>3ヶ月</option>
+                    </select>
+                </div>
+                <img src="https://illust-ryokka.jp/wp-content/uploads/2021/02/Graph-6.png" alt="支出グラフ">
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <div class="button-grid">
+                <button class="primary-button">
+                    <i class="fas fa-plus"></i>
+                    収支を追加
+                </button>
+                <button class="feature-button">
+                    <i class="fas fa-user-edit"></i>
+                    <a href="">登録情報編集</a>
+                </button>
+                <button class="feature-button">
+                    <i class="fas fa-lightbulb"></i>
+                    <a href="">アドバイス確認</a>
+                </button>
+                <button class="feature-button">
+                    <i class="fas fa-sync"></i>
+                    <a href="">サブスク登録</a>
+                </button>
+                <button class="feature-button">
+                    <i class="fas fa-book"></i>
+                    <a href="">家計簿確認</a>
+                </button>
+                <button class="feature-button">
+                    <i class="fas fa-tags"></i>
+                    <a href="">カテゴリ編集</a>
+                </button>
+            </div>
+        </div>
+</body>
+</html>
