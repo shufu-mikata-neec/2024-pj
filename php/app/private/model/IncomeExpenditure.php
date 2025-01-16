@@ -9,7 +9,7 @@ class IncomeExpenditure
     public $created_at;
     public $evidence_uuid;
 
-    public function __construct(int $user_id, int $in_out_id, int $category_id, int $amount, string $created_at, string $evidence_uuid)
+    public function __construct(int $user_id, int $in_out_id, int $category_id, int $amount, string $created_at, ?string $evidence_uuid)
     {
         $this->user_id = $user_id;
         $this->in_out_id = $in_out_id;

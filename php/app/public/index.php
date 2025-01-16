@@ -23,6 +23,9 @@ switch ($path) {
     case 'terms':
         require_once __DIR__ . '/../private/controller/terms.php';
         break;
+    case 'add_income_expenditure':
+        require_once __DIR__ . '/../private/controller/add_income_expenditure.php';
+        break;
     default:
         require_once __DIR__ . '/../private/controller/error.php';
         break;
