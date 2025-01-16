@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家計簿アドバイス</title>
+    <link rel="stylesheet" href="10_fpadvice.css">
+</head>
+<body>
+
+<header>
+    <h1>家計簿アドバイス</h1>
+</header>
+
+<main>
+
+    <section class="month-selector">
+        <label for="month-select">表示する月を選択:</label>
+        <form method="get" action="">
+        </form>
+    </section>
+
+    <div class="tab-1">
+        <!-- ファイナンシャルプランナーのアドバイス -->
+        <input type="radio" id="tab1" name="tab-1" checked>
+        <label for="tab1">ファイナンシャルプランナーのアドバイス</label>
+        <div class="tab-content">
+            <section class="advice-section">
+                <div class="advice-box" id="planner-advice-content">
+                    <p class="advice-date"></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- AIのアドバイス -->
+        <input type="radio" id="tab2" name="tab-1">
+        <label for="tab2">AIのアドバイス</label>
+        <div class="tab-content">
+            <section class="advice-section">
+                <div class="advice-box" id="ai-advice-content">
+                    <p class="advice-date"></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="notification">
+        <p>アドバイスは毎月初めに更新されます。</p>
+    </section>
+</main>
+
+<!-- トップ画面へボタン -->
+<a href="#top" id="back-to-top" class="top-button">
+    <span class="top-text">トップ画面に戻る</span>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<header>
+    {% if name %}
+    <p><a href="/logout">ログアウト</a></p>
+    <p>{{ name }}さん</p>
+    {% else %}
+    <p><a href="/login">ログイン</a></p>
+    {% endif %}
+</header>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>家計簿</title>
+    <link rel="stylesheet" href="14_housekeeping.css">
+</head>
+<body>
+    <h1>家計簿</h1>
+    
+    <div class="select">
+        <p>条件を設定</p>
+    <label for="month">年月を選択:</label>
+    <select id="month">
+        <option value="01">2024年 1月</option>
+        <option value="02">2024年 2月</option>
+        <option value="03">2024年 3月</option>
+        <!-- 他の月を自動追加 -->
+    </select>
+    <br>
+
+    <label for="price">金額を指定:</label>
+<input type="number" id="price" placeholder="〇〇円以上の支出を入力">
+
+    
+    </div>
+    <div class="summary">
+        <h2>収支バランス</h2>
+        <p>合計収入: <span id="totalIncome">0円</span></p>
+        <p>合計支出: <span id="totalExpense">6000円</span></p>
+        <p>収支バランス: <span id="balance">-6000円</span></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>年月日</th>
+                <th>カテゴリ</th>
+                <th>支出</th>
+                <th>メモ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2024年 1月 1日</td>
+                <td>食費</td>
+                <td>5000円</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2024年 1月 2日</td>
+                <td>交通費</td>
+                <td>1000円</td>
+                <td></td>
+            </tr>
+            <!-- 追加のデータ行をここに挿入 -->
+        </tbody>
+    </table>
+    
+
+    <input type="checkbox" id="showGraph" onclick="document.getElementById('graph').classList.toggle('hidden')">グラフを表示する
+
+    <div class="graph-container">
+        <img src="Graph.png" alt="円グラフ仮" id="graph" class="hidden">
+    </div>
+    <button class="Submit"><a href="">トップ画面に戻る</a></button>
+</body>
+</html>

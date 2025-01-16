@@ -16,11 +16,6 @@ document.getElementById('loginform').addEventListener('submit', function(e) {
         if (response.status === 200) {
             const data = await response.json();
 
-            console.log(data);
-
-            error.textContent = 'ログイン成功';
-            error.style.display = 'block';
-
             if (data.redirect) {
                 window.location.href = data.redirect;
             }

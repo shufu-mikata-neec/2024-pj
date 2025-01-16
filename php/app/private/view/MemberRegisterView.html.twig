@@ -3,33 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/register.js" defer></script>
     <title>新規会員登録</title>
 </head>
 <body>
     <div class="form-container">
         <h1>新規登録</h1>
-        <form id="registerForm" onsubmit="return validateForm(event)">
-            <div class="form-group">
+        <form id="registerForm">
+            <div class="username">
+                <p class="error"></p>
                 <label for="username">ユーザー名</label>
                 <input type="text" id="username" name="username" required>
             </div>
             
-            <div class="form-group">
+            <div class="email">
+                <p class="error"></p>
                 <label for="email">メールアドレス</label>
                 <input type="email" id="email" name="email" required>
             </div>
             
-            <div class="form-group">
+            <div class="password">
+                <p class="error"></p>
                 <label for="password">パスワード</label>
                 <input type="password" id="password" name="password" required>
             </div>
             
-            <div class="form-group">
+            <div class="password_confirm">
+                <p class="error"></p>
                 <label for="confirmPassword">パスワード再入力</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" required>
             </div>
             
-            <a href="04PasswordResetMailSendedView.html">利用規約</a>
+            <a target="_blank" href="/terms">利用規約</a>
+
+            <button type="submit" class="Submit">登録</button>
         </form>
     </div>
 </body>

@@ -9,7 +9,7 @@ class user
     public $password_reset_token;
     public $password_reset_toke_expiration;
 
-    public function __construct(int $id, string $email, string $password_hash, string $screen_name, string $password_reset_token, string $password_reset_toke_expiration)
+    public function __construct(int $id, string $email, string $password_hash, string $screen_name, ?string $password_reset_token, ?string $password_reset_toke_expiration)
     {
         $this->id = $id;
         $this->email = $email;

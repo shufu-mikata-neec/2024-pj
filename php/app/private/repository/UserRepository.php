@@ -11,8 +11,9 @@ class UserRepository
         $this->dbh = $dbh;
     }
 
-    public function findUserByEmail(string $email) : User {
-        $sql = 'SELECT * FROM users WHERE email = :email';
+    public function findUserByEmail(string $email): User
+    {
+        $sql = 'SELECT * FROM user WHERE email = :email';
         $stmt = $this->dbh->prepare($sql);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
@@ -27,7 +28,20 @@ class UserRepository
             $user['password_reset_token_expiration'] = null;
         }
 
-        return new User($user['id'], $user['name'], $user['email'], $user['password_hash'], $user['screen_name'], $user['password_reset_token'], $user['password_reset_token_expiration']);
+        return new User($user['user_id'], $user['email'], $user['password_hash'], $user['screen_name'], $user['password_reset_token'], $user['password_reset_token_expiration']);
     }
 
+    public function createUser(string $email, string $password, string $screen_name): User
+    {
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+        $sql = 'INSERT INTO user (email, password_hash, screen_name) VALUES (:email, :password_hash, :screen_name)';
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':password_hash', $password_hash, PDO::PARAM_STR);
+        $stmt->bindParam(':screen_name', $screen_name, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $this->findUserByEmail($email);
+    }
 }

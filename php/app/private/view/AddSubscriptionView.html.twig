@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サブスクリプション登録</title>
+  <link rel="stylesheet" href="06_success.css">
+</head>
+<body>
+  <div class="container">
+    <h2>サブスクリプション情報を登録</h2>
+    <form onsubmit="event.preventDefault(); validateForm();">
+      <label for="subscription-name">サブスクリプション名</label>
+      <input type="text" id="subscription-name" name="subscription-name" required>
+
+      <label for="payment-amount">支払金額</label>
+      <input type="text" id="payment-amount" name="payment-amount" required autocomplete="off" inputmode="numeric">
+      <div id="payment-amount-error" class="error-message" style="display: none;">
+        支払金額は半角数字で入力してください。
+      </div>
+
+      <label for="payment-method">支払方法</label>
+      <select id="payment-method" name="payment-method" required>
+        <option value="">選択してください</option>
+        <option value="credit-card">クレジットカード</option>
+        <option value="debit-card">デビットカード</option>
+        <option value="bank-transfer">銀行引き落とし</option>
+        <option value="other">その他</option>
+      </select>
+
+      <label for="start-date">支払日</label>
+      <input type="date" id="start-date" name="start-date" required>
+      <div id="date-error" class="error-message" style="display: none;">
+        支払日は今日以降の日付を入力してください。
+      </div>
+
+      <label for="payment-cycle">支払オプション</label>
+      <select id="payment-cycle" name="payment-cycle" required>
+        <option value="">選択してください</option>
+        <option value="1">1ヶ月ごと</option>
+        <option value="2">2ヶ月ごと</option>
+        <option value="3">3ヶ月ごと</option>
+        <option value="4">4ヶ月ごと</option>
+        <option value="5">5ヶ月ごと</option>
+        <option value="6">6ヶ月ごと</option>
+        <option value="7">7ヶ月ごと</option>
+        <option value="8">8ヶ月ごと</option>
+        <option value="9">9ヶ月ごと</option>
+        <option value="10">10ヶ月ごと</option>
+        <option value="11">11ヶ月ごと</option>
+        <option value="12">12ヶ月ごと</option>
+      </select>
+
+      <button type="submit">サブスク登録</button>
+    </form>
+
+    <a href="index.html" class="top-button">
+      <span class="text">トップ画面に戻る</span>
+    </a>
+  </div>
