@@ -1,21 +1,21 @@
 <?php
 require_once __DIR__ . '/../core/DB.php';
+require_once __DIR__ . '/../repository/UserRepository.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
-if ($_SERVER["REQUEST_METHOD"] == 'GET') {
-    # ログイン画面表示
-    # include __DIR__ . '/../view/LoginView.php';
-}
-
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../view');
+$twig = new \Twig\Environment($loader);
 
 $dbh = db_connect();
+$userRepository = new UserRepository($dbh);
 
-$sql = 'SELECT * FROM user WHERE email = :email';
-$email = 'hoge@example.com';
-$stmt = $dbh->prepare($sql);
-$stmt->bindParam(':email', $email, PDO::PARAM_STR);
+if ($_SERVER["REQUEST_METHOD"] == 'GET') {
+    // GETならログイン画面を表示
+    echo $twig->render('LoginView.html.twig');
+} elseif ($_SERVER["REQUEST_METHOD"] == 'POST') {
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
 
-$stmt->execute();
-
-$user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-var_dump($user);
+    http_response_code(200);
+    echo json_encode($data);
+}
