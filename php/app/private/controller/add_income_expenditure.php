@@ -16,3 +16,5 @@ if (!isset($_SESSION['user'])) {
     header('Location: /login');
     exit;
 }
+
+echo $twig->render('AddIncomeExpenditureView.html.twig');

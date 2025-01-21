@@ -26,6 +26,9 @@ switch ($path) {
     case 'add_income_expenditure':
         require_once __DIR__ . '/../private/controller/add_income_expenditure.php';
         break;
+    case 'add_category':
+        require_once __DIR__ . '/../private/controller/add_category.php';
+        break;
     default:
         require_once __DIR__ . '/../private/controller/error.php';
         break;
