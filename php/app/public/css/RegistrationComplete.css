@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0; /* 背景色を薄いグレーに */
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #0070f3; 
+    margin-bottom: 10px; /* 下マージンを追加 */
+}
+
+h2{
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px; /* パディングを増やして余裕を持たせる */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary {
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.summary img {
+    width: 80%;  
+    max-width: 400px;  
+    height: auto;  
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;  
+}
+
+.button-group {
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: center; /* 中央揃え */
+    margin-top: 20px; /* 上マージン */
+}
+
+.register-button {
+    padding: 12px 20px; /* ボタンのパディング */
+    background-color: #0070f3;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0; /* 角を四角に */
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #005bb5; /* ホバー時の色 */
+}

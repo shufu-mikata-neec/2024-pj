@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll; /* 常に縦スクロールバーを表示 */
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* 背景色を白に設定 */
+    color: #4a2f19;
+    display: block;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #2589d0;
+    font-size: 40px;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff; /* メインの背景色を白に設定 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+}
+
+.tab-1 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #e9f0f6; /* タブの背景色はそのまま */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-1 > label {
+    flex: 1 1;
+    order: -1;
+    min-width: 70px;
+    padding: 0.7em 1em 0.5em;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #e9f0f6; /* タブの背景色はそのまま */
+    color: #535353;
+    font-size: 0.9em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-1 input {
+    display: none;
+}
+
+.tab-content {
+    display: none;
+    width: 100%;
+    padding: 1.5em 1em;
+    background-color: #fff; /* タブコンテンツの背景色を白に設定 */
+    border-top: 1px solid #f0f0f0;
+}
+
+.tab-1 input:checked + label {
+    background-color: #fff;
+    border-color: #2589d0 #f0f0f0 #fff;
+    border-style: solid;
+    border-width: 4px 1px 1px;
+    border-radius: 5px 5px 0 0;
+    color: #333333;
+}
+
+.tab-1 input:checked + label + .tab-content {
+    display: block;
+}
+
+.notification {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    padding: 10px;
+    background-color: #f8f8f8; /* 通知の背景色はそのまま */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.month-selector {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.month-selector label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #000000;
+}
+
+.month-selector select {
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8; /* セレクトボックスの背景色はそのまま */
+    color: #4a2f19;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.month-selector select:hover {
+    background-color: #e9f0f6; /* ホバー時の背景色はそのまま */
+}
+
+/* Gray box styling for advice content */
+.advice-box {
+    background-color: #f8f8f8; /* アドバイスボックスの背景色はそのまま */
+    border: 1px solid #ddd; /* ボーダーはそのまま */
+    padding: 15px; /* ボックス内のパディング */
+    border-radius: 5px; /* 角を丸める */
+    margin: 15px 0; /* ボックスの周りのマージン */
+    color: #4a2f19; /* テキスト色 */
+}
+
+.advice-date {
+    font-weight: bold;
+    color: #4a2f19;
+    margin-bottom: 10px; /* 日付とアドバイス内容の間のスペース */
+}
+
+/* TOPボタンのスタイル */
+.top-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    background-color: #e27a3f; /* 通常のオレンジ色 */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.top-button .top-icon {
+    font-size: 16px;
+}
+
+.top-button .top-text {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* ホバー時のスタイル（色の変更） */
+.top-button:hover {
+    background-color: #ffffff; /* ホバー時は白色 */
+    color: #e27a3f; /* 文字色をオレンジ色に */
+    border: 2px solid #e27a3f; /* オレンジの境界線を追加 */
+}

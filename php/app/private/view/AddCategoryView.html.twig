@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>カテゴリ追加</title>
 </head>
+
 <body>
     <header>
         <h2>カテゴリを追加</h2>
@@ -12,11 +14,12 @@
     <main>
         <label for="category_name">カテゴリ名</label>
         <input type="text" id="category_name">
+        <label for="category_type">収入/支出</label>
         <select id="category_type">
-            <option value="1">収入</option>
-            <option value="2">支出</option>
-        </select>
-        <button>追加</button>
+            <option value="income">収入</option>
+            <option value="expense">支出</option>
+            <button>追加</button>
     </main>
 </body>
+
 </html>

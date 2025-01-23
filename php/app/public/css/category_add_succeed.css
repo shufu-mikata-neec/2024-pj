@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center; 
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #2589d0;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block; /* インラインブロックにして幅を調整 */
+    background-color: #2589d0;
+    color: #fff; /* 文字色を白に */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none; /* 下線を消す */
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0070a1;
+}

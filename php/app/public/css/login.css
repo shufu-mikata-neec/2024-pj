@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box; /* すべての要素にボックスモデルを適用 */
+}
+
+body {
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    height: 100vh; /* ビューポートの高さいっぱいに */
+    margin: 0; /* デフォルトのマージンをリセット */
+    background-color: #f0f0f0; /* 背景色を追加 */
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #0070f3;
+}
+
+.login-container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0070f3;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #005bb5;
+}
+
+.options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.options a {
+    display: block;
+    color: #0070f3;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}

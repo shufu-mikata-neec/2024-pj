@@ -1,0 +1,62 @@
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: #0070f3; 
+
+}
+
+
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary {
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.summary img {
+    width: 80%;  /* 画像の幅を80%に設定 */
+    max-width: 400px;  /* 最大幅を400pxに設定 */
+    height: auto;  /* 高さは自動調整 */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;  /* 中央揃え */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* ボタン間のスペース */
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列のグリッド */
+    gap: 10px; /* ボタン間のスペース */
+}
+
+.register-button {
+    text-align: center;
+    padding: 10px;
+    background-color: #0070f3;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #005bb5; /* ホバー時の色 */
+}
+
