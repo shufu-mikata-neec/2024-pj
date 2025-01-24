@@ -5,22 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/add_category.js" defer></script>
-    <title>カテゴリ追加</title>
+    <title>支払方法追加</title>
 </head>
 
 <body>
     <header>
-        <h2>カテゴリを追加</h2>
+        <h2>支払方法追加</h2>
     </header>
     <main>
         <div id="error"></div>
-        <label for="category_name">カテゴリ名</label>
+        <label for="category_name">支払方法名</label>
         <input type="text" id="category_name">
-        <label for="category_type">収入/支出</label>
-        <select id="category_type">
-            <option value="0">収入</option>
-            <option value="1">支出</option>
-        </select>
         <button id="add">追加</button>
         <input type="hidden" id="uid" value="{{ uid }}">
     </main>

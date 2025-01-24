@@ -8,7 +8,7 @@ class Category
     public $category_type;
     public $is_deleted;
 
-    public function __construct(int $user_id, int $category_id, string $category_name, string $category_type, bool $is_deleted)
+    public function __construct(int $user_id, int $category_id, string $category_name, string $category_type, bool $is_deleted = false)
     {
         $this->user_id = $user_id;
         $this->category_id = $category_id;
